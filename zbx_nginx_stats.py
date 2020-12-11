@@ -14,7 +14,9 @@ time_delta = 1              # grep interval in minutes
 
 # URL to nginx stat (http_stub_status_module)
 stat_url = 'https://nginx.server/nginx_stat'
+import ssl
 
+ssl._create_default_https_context = ssl._create_unverified_context
 # Nginx log file path
 nginx_log_file_path = '/var/log/nginx/access.log'
 
